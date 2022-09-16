@@ -1,0 +1,35 @@
+.panel {
+  background-size: auto;
+  background-position: center;
+  background-repeat: none;
+  height: 80vh;
+  flex: 0.5;
+  margin: 0.5rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+
+  h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0rem;
+    // opacity: 0;
+  }
+
+  // &:nth-child(1) {
+  //   color: rgba(6, 7, 57);
+  // }
+
+  // &:nth-child(2) {
+  //   color: white;
+  // }
+
+  &.active {
+    flex: 5;
+
+    h3 {
+      opacity: 1;
+    }
+  }
+}

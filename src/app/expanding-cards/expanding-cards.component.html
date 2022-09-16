@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- <app-cards *ngFor="let card of cards" [card]="card"></app-cards> -->
+
+  <div
+    class="panel"
+    *ngFor="let card of cards; index as i"
+    [ngClass]="{ active: card.isActive }"
+    [ngStyle]="{ 'background-image': 'url(' + card.image + ')' }"
+    (click)="onImageClick(i)"
+  >
+    <h3>{{ card.name }}</h3>
+  </div>
+</div>

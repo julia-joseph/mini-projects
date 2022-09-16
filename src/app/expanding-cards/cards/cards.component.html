@@ -1,0 +1,8 @@
+<div
+  class="panel"
+  *ngIf="card"
+  [ngClass]="{ active: card.isActive }"
+  [ngStyle]="{ 'background-image': 'url(' + card.image + ')' }"
+>
+  <h3>{{ card.name }}</h3>
+</div>

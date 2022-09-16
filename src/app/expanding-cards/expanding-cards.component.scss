@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  width: 90vw;
+
+  .panel {
+    background-size: auto;
+    background-position: center;
+    background-repeat: none;
+    height: 80vh;
+    flex: 0.5;
+    margin: 0.5rem;
+    position: relative;
+    // transition: flex 0.7s ease-in;
+    transition: all 700ms ease-in;
+    -webkit-transition: all 700ms ease-in;
+
+    h3 {
+      font-size: 2rem;
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      margin: 0rem;
+      opacity: 0;
+      color: #fff;
+    }
+
+    // &:nth-child(1) {
+    //   color: rgba(6, 7, 57);
+    // }
+
+    // &:nth-child(2) {
+    //   color: white;
+    // }
+
+    &.active {
+      flex: 5;
+
+      h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+      }
+    }
+  }
+
+  //   .panel {
+  //     top: 0;
+  //     transition: top ease 0.5s;
+  //   }
+
+  //   .panel:hover {
+  //     top: -10px;
+  //   }
+}
