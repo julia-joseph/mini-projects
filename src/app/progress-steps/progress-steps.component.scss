@@ -1,0 +1,59 @@
+$progress-bar-full: #3498bd;
+$progress-bar-empty: #e0e0e0;
+$button-enabled: #3498bd;
+$button-disabled: #e0e0e0;
+
+.container {
+  text-align: center;
+
+  .progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    width: 350px;
+  }
+
+  .progress-container::before {
+    content: "";
+    position: absolute;
+    background-color: $progress-bar-empty;
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  .progress {
+    position: absolute;
+    background-color: $progress-bar-full;
+    height: 4px;
+    width: 10%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+  }
+
+  button {
+    background-color: $button-enabled;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    margin: 0.8rem 0.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($button-enabled, 10%);
+      transform: scale(0.98);
+    }
+
+    &:disabled {
+      background-color: $button-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
