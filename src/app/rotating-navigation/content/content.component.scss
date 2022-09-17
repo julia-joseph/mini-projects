@@ -1,0 +1,26 @@
+.content {
+  padding: 6rem 3rem;
+  margin: 0rem auto;
+  max-width: 1000px;
+
+  img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  small {
+    color: #555;
+    font-style: italic;
+  }
+}

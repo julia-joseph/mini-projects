@@ -1,16 +1,22 @@
-<div class="container">
-  <div class="progress-container">
-    <div
-      class="progress"
-      id="progress"
-      [ngStyle]="{ width: progressWidth }"
-    ></div>
-    <app-step *ngFor="let step of steps" [step]="step"> </app-step>
+<main>
+  <div class="container">
+    <div class="progress-container">
+      <div
+        class="progress"
+        id="progress"
+        [ngStyle]="{ width: progressWidth }"
+      ></div>
+      <app-step *ngFor="let step of steps" [step]="step"> </app-step>
+    </div>
+    <button
+      id="prev"
+      [disabled]="isPrevDisabled()"
+      (click)="goToPreviousStep()"
+    >
+      Prev
+    </button>
+    <button id="next" [disabled]="isNextDisabled()" (click)="goToNextStep()">
+      Next
+    </button>
   </div>
-  <button id="prev" [disabled]="isPrevDisabled()" (click)="goToPreviousStep()">
-    Prev
-  </button>
-  <button id="next" [disabled]="isNextDisabled()" (click)="goToNextStep()">
-    Next
-  </button>
-</div>
+</main>

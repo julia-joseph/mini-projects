@@ -3,6 +3,14 @@ $progress-bar-empty: #e0e0e0;
 $button-enabled: #3498bd;
 $button-disabled: #e0e0e0;
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .container {
   text-align: center;
 

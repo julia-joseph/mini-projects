@@ -1,0 +1,17 @@
+$main-background: #0e0e0e;
+$content-background: #fafafa;
+
+main {
+  background-color: $main-background;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: $content-background;
+  transform-origin: top left;
+  transition: 0.4s linear;
+
+  &.open-nav {
+    transform: rotate(-20deg);
+  }
+}

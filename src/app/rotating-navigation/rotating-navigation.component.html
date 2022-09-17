@@ -1,0 +1,10 @@
+<main>
+  <div class="container" [ngClass]="{ 'open-nav': showNav }">
+    <app-navigation-icon
+      (showNavigation)="showNav = $event"
+      [showNav]="showNav"
+    ></app-navigation-icon>
+    <app-content></app-content>
+  </div>
+  <app-navigation-content [showNav]="showNav"></app-navigation-content>
+</main>

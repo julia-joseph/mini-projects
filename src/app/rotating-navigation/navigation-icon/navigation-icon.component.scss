@@ -1,0 +1,52 @@
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+
+  .circle {
+    background-color: rgb(151, 17, 17);
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: 0.5s linear;
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+
+      &#open {
+        left: 60%;
+      }
+
+      &#close {
+        top: 60%;
+        transform: rotate(90deg);
+        transform-origin: top left;
+      }
+    }
+  }
+
+  &.open-nav {
+    transform: rotate(-70deg);
+    transition: 0.4s linear;
+  }
+}
