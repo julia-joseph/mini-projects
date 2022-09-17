@@ -13,6 +13,7 @@ export class ProgressStepsComponent implements OnInit {
     { name: '4', isActive: false },
   ];
   progressWidth = '0%';
+  activeStep = 0;
 
   constructor() {}
 
@@ -26,30 +27,27 @@ export class ProgressStepsComponent implements OnInit {
     return this.steps[this.steps.length - 1].isActive === true;
   }
 
-  findLastStepIndex() {
-    const index = this.steps.findIndex((step) => !step.isActive);
-    return index !== -1 ? index - 1 : this.steps.length - 1;
-  }
-
   goToPreviousStep() {
-    const stepIndex = this.findLastStepIndex();
-
-    if (stepIndex !== undefined && stepIndex >= 0) {
-      this.updateProgressBar(stepIndex - 1);
-      this.steps[stepIndex].isActive = false;
+    if (this.activeStep !== undefined && this.activeStep >= 0) {
+      this.activeStep = this.activeStep - 1;
+      this.updateProgressBar();
+      this.steps[this.activeStep + 1].isActive = false;
     }
   }
 
   goToNextStep() {
-    const stepIndex = this.findLastStepIndex();
-
-    if (stepIndex !== undefined && stepIndex + 1 < this.steps.length) {
-      this.updateProgressBar(stepIndex + 1);
-      this.steps[stepIndex + 1].isActive = true;
+    if (
+      this.activeStep !== undefined &&
+      this.activeStep + 1 < this.steps.length
+    ) {
+      this.activeStep = this.activeStep + 1;
+      this.updateProgressBar();
+      this.steps[this.activeStep].isActive = true;
     }
   }
 
-  updateProgressBar(activeIndex: number) {
-    this.progressWidth = (activeIndex / (this.steps.length - 1)) * 100 + '%';
+  updateProgressBar() {
+    this.progressWidth =
+      (this.activeStep / (this.steps.length - 1)) * 100 + '%';
   }
 }
