@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
     { name: 'Progress Steps', path: 'progress-steps' },
     { name: 'Rotating Navigation', path: 'rotating-navigation' },
     { name: 'Hidden Search', path: 'hidden-search' },
+    { name: 'Blurry Loading', path: 'blurry-loading' },
   ];
 
   constructor() {}

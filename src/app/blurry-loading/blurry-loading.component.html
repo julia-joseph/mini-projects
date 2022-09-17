@@ -1,0 +1,6 @@
+<main>
+  <section [ngStyle]="{ filter: 'blur(' + blurAmount + 'px)' }"></section>
+  <div class="loading-text" [ngStyle]="{ opacity: loadingTextOpacity }">
+    {{ loadingPercent }}%
+  </div>
+</main>

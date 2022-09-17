@@ -35,6 +35,13 @@ const routes: Routes = [
         (m) => m.HiddenSearchModule
       ),
   },
+  {
+    path: 'blurry-loading',
+    loadChildren: () =>
+      import('./blurry-loading/blurry-loading.module').then(
+        (m) => m.BlurryLoadingModule
+      ),
+  },
 ];
 
 @NgModule({
