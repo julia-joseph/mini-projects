@@ -1,19 +1,32 @@
+$dark-green-color: #055d49;
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: darken($color: $dark-green-color, $amount: 10);
+  // background: radial-gradient(
+  //   circle,
+  //   rgba(0, 0, 0, 1) 0%,
+  //   rgba(5, 93, 73, 1) 87%
+  // );
 
   nav {
+    background-color: white;
+    border: 3px solid white;
+
     ul {
       list-style: none;
+      padding: 0rem;
+      margin: 0rem;
 
       li {
         cursor: pointer;
         padding: 1rem;
 
         &:hover {
-          background-color: rgb(5, 93, 73);
+          background-color: $dark-green-color;
           color: white;
           transition: 0.5s cubic-bezier(0.56, 0, 0.98, 0.13);
         }
