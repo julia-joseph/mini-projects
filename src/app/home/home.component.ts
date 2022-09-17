@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
     { name: 'Rotating Navigation', path: 'rotating-navigation' },
     { name: 'Hidden Search', path: 'hidden-search' },
     { name: 'Blurry Loading', path: 'blurry-loading' },
+    { name: 'Scrolling Animation', path: 'scrolling-animation' },
   ];
 
   constructor() {}

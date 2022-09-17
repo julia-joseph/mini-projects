@@ -42,6 +42,13 @@ const routes: Routes = [
         (m) => m.BlurryLoadingModule
       ),
   },
+  {
+    path: 'scrolling-animation',
+    loadChildren: () =>
+      import('./scrolling-animation/scrolling-animation.module').then(
+        (m) => m.ScrollingAnimationModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,14 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <h3>Scroll Animation</h3>
+  <div
+    class="box"
+    *ngFor="let box of boxes; index as i"
+    [ngClass]="{ show: box.isDisplayed }"
+    appScrolling
+  >
+    <h2>Content</h2>
+  </div>
+</main>
