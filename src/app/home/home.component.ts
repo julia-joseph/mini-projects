@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
     { name: 'Expanding Cards', path: 'expanding-cards' },
     { name: 'Progress Steps', path: 'progress-steps' },
     { name: 'Rotating Navigation', path: 'rotating-navigation' },
+    { name: 'Hidden Search', path: 'hidden-search' },
   ];
 
   constructor() {}

@@ -1,0 +1,67 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(156, 33, 91);
+
+  .home-link {
+    position: fixed;
+    top: 10%;
+  }
+}
+
+.search {
+  position: relative;
+
+  input {
+    // position: absolute;
+    border: none;
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 0rem 0.5rem;
+    max-height: 50px;
+    min-height: 50px;
+    width: 40px;
+    transition: 0.4s ease;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.4s ease;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.expand {
+    input {
+      width: 200px;
+    }
+
+    button {
+      transform: translate(198px);
+    }
+  }
+}
+
+.loading {
+  margin-top: 0.5rem;
+}
+
+.search-results {
+  margin-top: 0.5rem;
+}

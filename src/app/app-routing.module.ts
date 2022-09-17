@@ -11,6 +11,13 @@ const routes: Routes = [
   { path: 'expanding-cards', component: ExpandingCardsComponent },
   { path: 'progress-steps', component: ProgressStepsComponent },
   { path: 'rotating-navigation', component: RotatingNavigationComponent },
+  {
+    path: 'hidden-search',
+    loadChildren: () =>
+      import('./hidden-search/hidden-search.module').then(
+        (m) => m.HiddenSearchModule
+      ),
+  },
 ];
 
 @NgModule({
