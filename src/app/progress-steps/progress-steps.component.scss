@@ -13,6 +13,7 @@ main {
   .home-link {
     position: fixed;
     top: 10%;
+    color: darken($color: $button-enabled, $amount: 10);
   }
 }
 

@@ -1,16 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExpandingCardsComponent } from './expanding-cards/expanding-cards.component';
-import { HomeComponent } from './home/home.component';
-import { ProgressStepsComponent } from './progress-steps/progress-steps.component';
-import { RotatingNavigationComponent } from './rotating-navigation/rotating-navigation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'rotating-navigation', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'expanding-cards', component: ExpandingCardsComponent },
-  { path: 'progress-steps', component: ProgressStepsComponent },
-  { path: 'rotating-navigation', component: RotatingNavigationComponent },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'expanding-cards',
+    loadChildren: () =>
+      import('./expanding-cards/expanding-cards.module').then(
+        (m) => m.ExpandingCardsModule
+      ),
+  },
+  {
+    path: 'progress-steps',
+    loadChildren: () =>
+      import('./progress-steps/progress-steps.module').then(
+        (m) => m.ProgressStepsModule
+      ),
+  },
+  {
+    path: 'rotating-navigation',
+    loadChildren: () =>
+      import('./rotating-navigation/rotating-navigation.module').then(
+        (m) => m.RotatingNavigationModule
+      ),
+  },
   {
     path: 'hidden-search',
     loadChildren: () =>
