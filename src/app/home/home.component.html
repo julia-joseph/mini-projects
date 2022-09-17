@@ -1,0 +1,14 @@
+<main>
+  <div class="container">
+    <nav>
+      <ul>
+        <li
+          *ngFor="let project of projects; index as i"
+          [routerLink]="'/' + project.path"
+        >
+          Project {{ i + 1 }}: {{ project.name }}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>

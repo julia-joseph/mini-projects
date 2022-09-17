@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  nav {
+    ul {
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        padding: 1rem;
+
+        &:hover {
+          background-color: rgb(5, 93, 73);
+          color: white;
+          transition: 0.5s cubic-bezier(0.56, 0, 0.98, 0.13);
+        }
+      }
+    }
+  }
+}

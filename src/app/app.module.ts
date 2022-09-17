@@ -11,6 +11,7 @@ import { RotatingNavigationComponent } from './rotating-navigation/rotating-navi
 import { ContentComponent } from './rotating-navigation/content/content.component';
 import { NavigationIconComponent } from './rotating-navigation/navigation-icon/navigation-icon.component';
 import { NavigationContentComponent } from './rotating-navigation/navigation-content/navigation-content.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavigationContentComponent } from './rotating-navigation/navigation-con
     ContentComponent,
     NavigationIconComponent,
     NavigationContentComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
