@@ -1,0 +1,56 @@
+$primary-color: rgb(31, 245, 238);
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+
+  .home-link {
+    position: fixed;
+    top: 5%;
+  }
+}
+
+.container {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  padding: 1rem;
+  min-width: 300px;
+  min-height: 200px;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    max-width: 600px;
+    margin-top: 0rem;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    background-color: $primary-color;
+    border: none;
+    color: white;
+    border-radius: 0.25rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 300px;
+  }
+}

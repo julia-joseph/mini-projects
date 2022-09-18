@@ -1,0 +1,13 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <div class="container">
+    <h3>Don't Laugh Challenge</h3>
+    <p class="joke" *ngIf="joke">{{ joke }}</p>
+    <p class="joke" *ngIf="loading">
+      <i class="fa fa-pulse fa-spinner"></i>
+    </p>
+    <button (click)="getJoke()">Get Joke</button>
+  </div>
+</main>

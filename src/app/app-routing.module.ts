@@ -70,6 +70,11 @@ const routes: Routes = [
         (m) => m.SoundBoardModule
       ),
   },
+  {
+    path: 'dad-jokes',
+    loadChildren: () =>
+      import('./dad-jokes/dad-jokes.module').then((m) => m.DadJokesModule),
+  },
 ];
 
 @NgModule({
