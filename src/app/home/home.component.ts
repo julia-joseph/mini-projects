@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     { name: 'Form Wave Animation', path: 'form-wave-animation' },
     { name: 'Sound Board', path: 'sound-board' },
     { name: 'Dad Jokes', path: 'dad-jokes' },
+    { name: 'Event Keycodes', path: 'event-keycodes' },
   ];
 
   constructor() {}

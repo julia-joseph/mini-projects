@@ -1,0 +1,39 @@
+$primary-color: #999;
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+
+  .home-link {
+    position: fixed;
+    top: 5%;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+
+  .key {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: center;
+    background-color: #ccc;
+
+    .key-title {
+      border-bottom: 1px solid black;
+      padding: 0.5rem;
+    }
+
+    .key-value {
+      padding: 0.75rem 0.5rem;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <h3>Event KeyCodes</h3>
+  <div class="container">
+    <div class="key" *ngIf="event && event.key">
+      <div class="key-title">event.key</div>
+      <div class="key-value">{{ event.key === " " ? "Space" : event.key }}</div>
+    </div>
+    <div class="key" *ngIf="event && event.keyCode">
+      <div class="key-title">event.keyCode</div>
+      <div class="key-value">{{ event.keyCode }}</div>
+    </div>
+    <div class="key" *ngIf="event && event.code">
+      <div class="key-title">event.code</div>
+      <div class="key-value">{{ event.code }}</div>
+    </div>
+    <div class="key" *ngIf="!event">
+      Please enter a key to find out keycode!
+    </div>
+  </div>
+</main>

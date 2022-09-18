@@ -75,6 +75,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./dad-jokes/dad-jokes.module').then((m) => m.DadJokesModule),
   },
+  {
+    path: 'event-keycodes',
+    loadChildren: () =>
+      import('./event-keycodes/event-keycodes.module').then(
+        (m) => m.EventKeycodesModule
+      ),
+  },
 ];
 
 @NgModule({
