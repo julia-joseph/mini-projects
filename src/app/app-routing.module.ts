@@ -49,6 +49,13 @@ const routes: Routes = [
         (m) => m.ScrollingAnimationModule
       ),
   },
+  {
+    path: 'split-landing-page',
+    loadChildren: () =>
+      import('./split-landing-page/split-landing-page.module').then(
+        (m) => m.SplitLandingPageModule
+      ),
+  },
 ];
 
 @NgModule({

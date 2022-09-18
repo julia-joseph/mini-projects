@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
     { name: 'Hidden Search', path: 'hidden-search' },
     { name: 'Blurry Loading', path: 'blurry-loading' },
     { name: 'Scrolling Animation', path: 'scrolling-animation' },
+    { name: 'Split Landing Page', path: 'split-landing-page' },
   ];
 
   constructor() {}

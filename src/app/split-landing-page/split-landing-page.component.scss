@@ -1,0 +1,135 @@
+main {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.home-link {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  z-index: 3;
+}
+
+.landing-container {
+  height: inherit;
+  display: flex;
+
+  .split {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    &.left {
+      background-color: green;
+      background-image: url("https://images.unsplash.com/photo-1529288871968-9945adb0588f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: white, $alpha: 0.3);
+      }
+
+      .btn {
+        &:hover {
+          background-color: #92b33c;
+          border-color: #92b33c;
+        }
+      }
+    }
+
+    &.right {
+      background-color: brown;
+      background-image: url("https://images.unsplash.com/photo-1504788363733-507549153474?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: white, $alpha: 0.3);
+      }
+
+      .btn {
+        &:hover {
+          background-color: #fbe35a;
+          border-color: #fbe35a;
+        }
+      }
+    }
+  }
+
+  &.hover-left {
+    .split {
+      &.left {
+        width: 75%;
+        transition: 0.4s ease-in-out;
+      }
+
+      &.right {
+        width: 25%;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &.hover-right {
+    .left {
+      width: 25%;
+      transition: 0.4s ease-in-out;
+    }
+
+    .right {
+      width: 75%;
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  h2 {
+    color: black;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  .btn {
+    color: black;
+    padding: 0.5rem 2rem;
+    border: 1px solid black;
+    z-index: 2;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.96);
+
+      color: white;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .landing-container {
+    .split {
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        padding: 0.25rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
