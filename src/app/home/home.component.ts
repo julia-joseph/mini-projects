@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
     { name: 'Scrolling Animation', path: 'scrolling-animation' },
     { name: 'Split Landing Page', path: 'split-landing-page' },
     { name: 'Form Wave Animation', path: 'form-wave-animation' },
+    { name: 'Sound Board', path: 'sound-board' },
   ];
 
   constructor() {}

@@ -1,0 +1,44 @@
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  .home-link {
+    position: fixed;
+    top: 10%;
+  }
+}
+
+h3 {
+  margin-bottom: 3rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 3px solid rgb(5, 5, 66);
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-family: inherit;
+
+    &:hover {
+      border: 3px solid white;
+      border-radius: 0.25rem;
+      color: white;
+      background-color: rgb(5, 5, 66);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+}

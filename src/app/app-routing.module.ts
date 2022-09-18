@@ -63,6 +63,13 @@ const routes: Routes = [
         (m) => m.FormWaveAnimationModule
       ),
   },
+  {
+    path: 'sound-board',
+    loadChildren: () =>
+      import('./sound-board/sound-board.module').then(
+        (m) => m.SoundBoardModule
+      ),
+  },
 ];
 
 @NgModule({
