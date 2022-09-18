@@ -1,0 +1,12 @@
+label {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+
+  span {
+    display: inline-block;
+    font-size: 0.9rem;
+    min-width: 5px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}

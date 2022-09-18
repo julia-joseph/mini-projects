@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'rotating-navigation', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
@@ -54,6 +54,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./split-landing-page/split-landing-page.module').then(
         (m) => m.SplitLandingPageModule
+      ),
+  },
+  {
+    path: 'form-wave-animation',
+    loadChildren: () =>
+      import('./form-wave-animation/form-wave-animation.module').then(
+        (m) => m.FormWaveAnimationModule
       ),
   },
 ];

@@ -1,0 +1,7 @@
+<label>
+  <span
+    *ngFor="let letter of label.split(''); index as i"
+    [ngStyle]="{ 'transition-delay': i * 100 + 'ms' }"
+    >{{ letter }}</span
+  >
+</label>

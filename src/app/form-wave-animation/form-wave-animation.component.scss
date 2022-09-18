@@ -1,0 +1,67 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4500;
+}
+
+:host ::ng-deep {
+  .login-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-control {
+      position: relative;
+      margin: 1rem 0rem 2.5rem 0rem;
+
+      input {
+        //   position: absolute;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 0.25rem;
+        font-size: 1.25rem;
+        width: 100%;
+
+        &:focus,
+        &:valid {
+          outline: none;
+          border-bottom-color: #ff4500;
+
+          + app-form-wave-label label span {
+            color: #ff4500;
+            transform: translateY(-30px);
+          }
+        }
+      }
+    }
+
+    button {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      padding: 0.5rem 1rem;
+      background-color: #ff4500;
+      color: white;
+      font-size: 1rem;
+      font-family: inherit;
+      margin-top: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($color: #ff4500, $amount: 5);
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
