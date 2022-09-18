@@ -22,7 +22,7 @@ main {
   margin: 1rem 0rem;
   border-radius: 1rem;
   transform: translateX(500%);
-  transition: 0.4s ease;
+  transition: 0.2s ease-in-out;
 
   &:nth-of-type(even) {
     transform: translateX(-500%);
