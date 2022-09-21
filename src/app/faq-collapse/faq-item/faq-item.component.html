@@ -1,0 +1,14 @@
+<div
+  class="faq-item-container"
+  (click)="expandCollapse()"
+  [ngClass]="{ expanded: isExpanded }"
+>
+  <div class="title">
+    <div class="question">{{ question }}</div>
+    <i class="fa-solid fa-xmark fa-flip" *ngIf="isExpanded"></i>
+    <i class="fa-solid fa-angle-down" *ngIf="!isExpanded"></i>
+  </div>
+  <div class="content" *ngIf="isExpanded">
+    {{ answer }}
+  </div>
+</div>

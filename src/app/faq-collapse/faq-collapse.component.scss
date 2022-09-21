@@ -1,0 +1,60 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #e5e5f7 20%,
+      #e5e5f7 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #e5e5f7 20%,
+        #e5e5f7 80%,
+        transparent 80%,
+        transparent
+      )
+      25px 25px,
+    linear-gradient(#444cf7 2px, transparent 2px) 0 -1px,
+    linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+
+  .home-link {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.container {
+  opacity: 1;
+  z-index: 1;
+  margin-top: 4rem;
+  transition: 0.4s ease;
+
+  h3 {
+    background-color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    max-width: 900px;
+    width: 40vw;
+    min-width: 250px;
+    margin: 0rem 1rem;
+  }
+
+  div {
+    text-align: center;
+  }
+}

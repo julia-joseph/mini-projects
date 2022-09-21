@@ -82,6 +82,13 @@ const routes: Routes = [
         (m) => m.EventKeycodesModule
       ),
   },
+  {
+    path: 'faq-collapse',
+    loadChildren: () =>
+      import('./faq-collapse/faq-collapse.module').then(
+        (m) => m.FaqCollapseModule
+      ),
+  },
 ];
 
 @NgModule({
