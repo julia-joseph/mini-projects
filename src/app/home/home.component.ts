@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
     { name: 'Dad Jokes', path: 'dad-jokes' },
     { name: 'Event Keycodes', path: 'event-keycodes' },
     { name: 'FAQ Collapse', path: 'faq-collapse' },
+    { name: 'Random Choice Picker', path: 'random-choice-picker' },
   ];
 
   constructor() {}

@@ -1,0 +1,35 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 70vw;
+  min-width: 250px;
+
+  .choices {
+    .choice {
+      word-break: break-all;
+      border: 1px solid rebeccapurple;
+      padding: 0.25rem 0.75rem;
+      color: white;
+      background-color: rebeccapurple;
+      margin: 1rem 0rem;
+    }
+  }
+}

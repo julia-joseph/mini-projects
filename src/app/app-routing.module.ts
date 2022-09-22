@@ -89,6 +89,13 @@ const routes: Routes = [
         (m) => m.FaqCollapseModule
       ),
   },
+  {
+    path: 'random-choice-picker',
+    loadChildren: () =>
+      import('./random-choice-picker/random-choice-picker.module').then(
+        (m) => m.RandomChoicePickerModule
+      ),
+  },
 ];
 
 @NgModule({
