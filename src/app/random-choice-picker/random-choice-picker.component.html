@@ -9,7 +9,8 @@
       id="choices"
       cols="30"
       rows="10"
-      (input)="onChange($event)"
+      [ngModel]="choicelist"
+      (ngModelChange)="onChange($event)"
       (keyup.enter)="onEnter($event)"
     ></textarea>
     <div class="choices">

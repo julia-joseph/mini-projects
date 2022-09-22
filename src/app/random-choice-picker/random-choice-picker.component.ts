@@ -14,16 +14,13 @@ export class RandomChoicePickerComponent implements OnInit {
   ngOnInit(): void {}
 
   onChange(event: any) {
-    if (event.inputType === 'insertLineBreak') return;
-
-    this.choicelist += event.data ? event.data : '';
+    this.choicelist = event;
     this.choices = this.choicelist.split(',');
-    console.log(this.choicelist);
-    console.log(event.data);
-    console.log(event);
   }
 
   onEnter(event: any) {
+    this.choicelist = '';
+    // this.choices = [];
     console.log(event);
   }
 }
