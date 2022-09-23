@@ -13,7 +13,6 @@ export class EventKeycodesComponent implements OnInit {
   ngOnInit(): void {}
 
   @HostListener('document:keypress', ['$event']) onKeyDown(event: any) {
-    console.log(event);
     this.event = {
       key: event.key,
       code: event.code,

@@ -4,20 +4,26 @@
   </div>
   <div class="container">
     <h3>Random Choice Picker</h3>
+    <p>
+      Enter all the choices divded by comma (','). <br />
+      Press the enter key when you are done
+    </p>
     <textarea
       name="choices"
       id="choices"
-      cols="30"
-      rows="10"
       [ngModel]="choicelist"
       (ngModelChange)="onChange($event)"
       (keyup.enter)="onEnter($event)"
     ></textarea>
     <div class="choices">
       <app-choice *ngFor="let choice of choices; index as i"
-        ><div *ngIf="choice.length" class="choice">
-          <span>{{ choice }}</span>
-        </div></app-choice
+        ><span
+          *ngIf="choice.text.length"
+          class="choice"
+          [ngStyle]="choice.selected ? selectedStyle : null"
+        >
+          {{ choice.text }}
+        </span></app-choice
       >
     </div>
   </div>
