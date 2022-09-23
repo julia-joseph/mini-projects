@@ -1,0 +1,20 @@
+<main>
+  <div class="container">
+    <nav class="animated-nav" [ngClass]="{ closed: !showMenu }">
+      <ul>
+        <li [routerLink]="['/home']">
+          <i class="fa-solid fa-house"></i><span>Home</span>
+        </li>
+        <li><i class="fa-solid fa-user"></i><span>About</span></li>
+        <li><i class="fa-solid fa-address-book"></i><span>Contact</span></li>
+        <li>
+          <i
+            class="fa-solid fa-times"
+            [ngClass]="{ 'fa-times': showMenu, 'fa-bars': !showMenu }"
+            (click)="showMenu = !showMenu"
+          ></i>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>

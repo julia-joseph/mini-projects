@@ -96,6 +96,13 @@ const routes: Routes = [
         (m) => m.RandomChoicePickerModule
       ),
   },
+  {
+    path: 'animated-navigation',
+    loadChildren: () =>
+      import('./animated-navigation/animated-navigation.module').then(
+        (m) => m.AnimatedNavigationModule
+      ),
+  },
 ];
 
 @NgModule({

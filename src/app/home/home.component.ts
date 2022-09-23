@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     { name: 'Event Keycodes', path: 'event-keycodes' },
     { name: 'FAQ Collapse', path: 'faq-collapse' },
     { name: 'Random Choice Picker', path: 'random-choice-picker' },
+    { name: 'Animated Navigation', path: 'animated-navigation' },
   ];
 
   constructor() {}
