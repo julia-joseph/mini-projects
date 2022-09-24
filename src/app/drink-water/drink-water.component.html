@@ -4,5 +4,33 @@
   </div>
   <div class="container">
     <h2>Drink Water</h2>
+    <div class="glass">
+      <div class="water">
+        <div class="remaining" [ngStyle]="{ height: airHeight + 'px' }">
+          <div>{{ remaining }}L</div>
+          <div>Remains</div>
+        </div>
+        <div
+          class="amount"
+          *ngIf="amount"
+          [ngStyle]="{ height: waterHeight + 'px' }"
+        >
+          {{ amount }}%
+        </div>
+      </div>
+    </div>
+    <div class="refills">
+      <div
+        class="refill"
+        *ngFor="let refill of refills; index as i"
+        [ngStyle]="{
+          'background-color': refill.full ? 'blue' : 'white',
+          color: refill.full ? 'white' : '#18b6ff'
+        }"
+        (click)="fill(i)"
+      >
+        {{ refill.amount }}mL
+      </div>
+    </div>
   </div>
 </main>

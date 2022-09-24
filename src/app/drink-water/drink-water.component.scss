@@ -23,4 +23,96 @@ main {
 .container {
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-top: 4rem;
+  }
+
+  .glass {
+    height: 400px;
+    width: 250px;
+    border: 5px solid white;
+    border-radius: 0 0 55px 55px;
+    // border-radius: 0 0 125px 125px;
+
+    .water {
+      background-color: white;
+      height: inherit;
+      width: inherit;
+      border-radius: inherit;
+      position: relative;
+
+      .remaining {
+        color: $primary-color;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .amount {
+        height: inherit;
+        width: inherit;
+        border-radius: inherit;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .refills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 1rem 1rem 1rem;
+    justify-content: center;
+
+    .refill {
+      border: 2px solid white;
+      background-color: white;
+      color: $primary-color;
+      height: 150px;
+      width: 100px;
+      margin: 0 1rem 1rem 0;
+      // border-radius: 0 0 50px 50px;
+      border-radius: 0 0 25px 25px;
+      display: grid;
+      align-items: center;
+      cursor: pointer;
+
+      &.full {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    .glass {
+      height: 200px;
+      width: 125px;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .refills {
+      margin: 2rem 0.5rem 0.5rem 0.5rem;
+
+      .refill {
+        height: 100px;
+        width: 50px;
+        font-size: 0.9rem;
+        border-radius: 0 0 15px 15px;
+      }
+    }
+  }
 }
