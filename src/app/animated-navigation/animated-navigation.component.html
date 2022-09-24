@@ -7,14 +7,11 @@
         </li>
         <li><i class="fa-solid fa-user"></i><span>About</span></li>
         <li><i class="fa-solid fa-address-book"></i><span>Contact</span></li>
-        <li>
-          <i
-            class="fa-solid fa-times"
-            [ngClass]="{ 'fa-times': showMenu, 'fa-bars': !showMenu }"
-            (click)="showMenu = !showMenu"
-          ></i>
-        </li>
       </ul>
+      <button (click)="showMenu = !showMenu">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
     </nav>
   </div>
 </main>
