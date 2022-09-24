@@ -30,13 +30,22 @@ export class DrinkWaterComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event']) onResize() {
-    if (window.innerHeight < 580) {
+    if (window.innerWidth < 580) {
       this.totalGlassHeight = 200;
+    } else {
+      this.totalGlassHeight = 400;
     }
+    this.setAmounts();
   }
 
   fill(i: number) {
-    this.refills[i].full = !this.refills[i].full;
+    this.refills.forEach((refill, j) => {
+      if (j <= i) {
+        this.refills[j].full = true;
+      } else {
+        this.refills[j].full = false;
+      }
+    });
     this.setAmounts();
   }
 

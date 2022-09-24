@@ -102,6 +102,12 @@ main {
       height: 200px;
       width: 125px;
       border-radius: 0 0 30px 30px;
+
+      .water {
+        .remaining {
+          font-size: 0.8rem;
+        }
+      }
     }
 
     .refills {
