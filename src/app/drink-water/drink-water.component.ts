@@ -38,7 +38,17 @@ export class DrinkWaterComponent implements OnInit {
     this.setAmounts();
   }
 
-  fill(i: number) {
+  isLastFullGlass(i: number) {
+    return i + 1 < this.refills.length
+      ? this.refills[i].full && !this.refills[i + 1].full
+      : this.refills[i].full;
+  }
+
+  emptySingleGlass(i: number) {
+    this.refills[i].full = false;
+  }
+
+  fillAllPreviousGlasses(i: number) {
     this.refills.forEach((refill, j) => {
       if (j <= i) {
         this.refills[j].full = true;
@@ -46,6 +56,14 @@ export class DrinkWaterComponent implements OnInit {
         this.refills[j].full = false;
       }
     });
+  }
+
+  fill(i: number) {
+    if (this.isLastFullGlass(i)) {
+      this.emptySingleGlass(i);
+    } else {
+      this.fillAllPreviousGlasses(i);
+    }
     this.setAmounts();
   }
 

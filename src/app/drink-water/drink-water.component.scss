@@ -53,6 +53,12 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: 0.3s ease;
+
+        div {
+          font-weight: bold;
+          font-size: 1.25rem;
+        }
       }
 
       .amount {
@@ -66,6 +72,8 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 2rem;
+        transition: 0.3s ease;
       }
     }
   }
@@ -88,6 +96,7 @@ main {
       display: grid;
       align-items: center;
       cursor: pointer;
+      transition: 0.3s ease;
 
       &.full {
         background-color: $primary-color;
