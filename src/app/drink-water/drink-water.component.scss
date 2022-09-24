@@ -1,0 +1,26 @@
+$primary-color: #18b6ff;
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+
+  .home-link {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    color: $primary-color;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.container {
+  text-align: center;
+  color: white;
+}

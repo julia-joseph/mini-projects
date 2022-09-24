@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     { name: 'Random Choice Picker', path: 'random-choice-picker' },
     { name: 'Animated Navigation', path: 'animated-navigation' },
     { name: 'Incrementing Counter', path: 'incrementing-counter' },
+    { name: 'Drink Water', path: 'drink-water' },
   ];
 
   constructor() {}

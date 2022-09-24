@@ -110,6 +110,13 @@ const routes: Routes = [
         (m) => m.IncrementingCounterModule
       ),
   },
+  {
+    path: 'drink-water',
+    loadChildren: () =>
+      import('./drink-water/drink-water.module').then(
+        (m) => m.DrinkWaterModule
+      ),
+  },
 ];
 
 @NgModule({
