@@ -103,6 +103,13 @@ const routes: Routes = [
         (m) => m.AnimatedNavigationModule
       ),
   },
+  {
+    path: 'incrementing-counter',
+    loadChildren: () =>
+      import('./incrementing-counter/incrementing-counter.module').then(
+        (m) => m.IncrementingCounterModule
+      ),
+  },
 ];
 
 @NgModule({

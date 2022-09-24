@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     { name: 'FAQ Collapse', path: 'faq-collapse' },
     { name: 'Random Choice Picker', path: 'random-choice-picker' },
     { name: 'Animated Navigation', path: 'animated-navigation' },
+    { name: 'Incrementing Counter', path: 'incrementing-counter' },
   ];
 
   constructor() {}
