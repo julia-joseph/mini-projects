@@ -1,0 +1,81 @@
+.movie-container {
+  height: 400px;
+  width: 250px;
+  overflow: hidden;
+  margin: 1rem;
+  border: 1px solid black;
+  position: relative;
+  background-color: rgba($color: black, $alpha: 0.3);
+
+  img {
+    width: inherit;
+    height: 250px;
+  }
+
+  .movie-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    color: white;
+
+    .movie-rating {
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+      padding: 0 0.5rem;
+
+      &.good {
+        background-color: green;
+        border: 1px solid green;
+      }
+      &.bad {
+        background-color: red;
+        border: 1px solid red;
+      }
+    }
+  }
+
+  .about {
+    background-color: white;
+    color: black;
+    position: absolute;
+    padding: 0.5rem;
+    top: 400px;
+
+    div {
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    .about {
+      transition: 0.3s ease-in;
+      bottom: 0px;
+      top: 0px;
+    }
+  }
+
+  .about-link {
+    visibility: hidden;
+    background-color: rgba($color: white, $alpha: 0.1);
+    width: inherit;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 376px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .movie-container {
+    .about-link {
+      visibility: visible;
+      background-color: rgba($color: white, $alpha: 0.1);
+      width: inherit;
+      color: white;
+      text-align: center;
+      position: absolute;
+      top: 376px !important;
+    }
+  }
+}

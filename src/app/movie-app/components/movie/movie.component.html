@@ -1,0 +1,34 @@
+<div
+  class="movie-container"
+  *ngIf="movie"
+  (mouseenter)="showAbout = 0"
+  (mouseleave)="showAbout = 400"
+>
+  <img
+    [src]="'https://image.tmdb.org/t/p/original' + movie.poster_path"
+    [alt]="movie.original_title"
+  />
+  <div class="movie-info">
+    <div class="movie-title">{{ movie.original_title }}</div>
+    <div
+      class="movie-rating"
+      *ngIf="movie.vote_average"
+      [ngClass]="{ good: movie.vote_average > 8, bad: 4 > movie.vote_average }"
+    >
+      {{ movie.vote_average }}
+    </div>
+  </div>
+  <div
+    class="about-link"
+    [ngStyle]="{ top: showAbout + 'px' }"
+    (click)="showAbout = 0"
+  >
+    About <i class="fa-solid fa-angle-up"></i>
+  </div>
+  <div class="about" [ngStyle]="{ top: showAbout + 'px' }">
+    <div (click)="showAbout = 400">
+      <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div>{{ movie.overview }}</div>
+  </div>
+</div>

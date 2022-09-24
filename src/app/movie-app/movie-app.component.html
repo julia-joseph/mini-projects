@@ -1,0 +1,16 @@
+<main>
+  <nav>
+    <div [routerLink]="['/home']" class="home-link">
+      <i class="fa-solid fa-house"></i><span></span>
+    </div>
+    <div id="search">
+      <input type="text" [ngModel]="searchTitle" />
+      <button>
+        <i class="fa-solid fa-magnifying-glass" (click)="findMovies()"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="movies" *ngIf="movies">
+    <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+  </div>
+</main>

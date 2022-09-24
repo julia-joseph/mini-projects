@@ -117,6 +117,11 @@ const routes: Routes = [
         (m) => m.DrinkWaterModule
       ),
   },
+  {
+    path: 'movie-app',
+    loadChildren: () =>
+      import('./movie-app/movie-app.module').then((m) => m.MovieAppModule),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,23 @@
+main {
+  min-height: 100vh;
+}
+
+nav {
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+
+  .home-link {
+    color: white;
+    padding: 1rem;
+  }
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: black, $alpha: 0.9);
+}
