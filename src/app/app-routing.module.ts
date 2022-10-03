@@ -122,6 +122,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./movie-app/movie-app.module').then((m) => m.MovieAppModule),
   },
+  {
+    path: 'background-slider',
+    loadChildren: () =>
+      import('./background-slider/background-slider.module').then(
+        (m) => m.BackgroundSliderModule
+      ),
+  },
 ];
 
 @NgModule({

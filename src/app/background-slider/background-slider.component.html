@@ -1,0 +1,11 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <div class="images">
+    <app-slide
+      *ngFor="let image of images; index as i"
+      [image]="image"
+    ></app-slide>
+  </div>
+</main>

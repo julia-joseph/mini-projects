@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
     { name: 'Incrementing Counter', path: 'incrementing-counter' },
     { name: 'Drink Water', path: 'drink-water' },
     { name: 'Movie App', path: 'movie-app' },
+    { name: 'Background Slider', path: 'background-slider' },
   ];
 
   constructor() {}
