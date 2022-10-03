@@ -10,6 +10,7 @@ export class MovieAppComponent implements OnInit {
   data: any = null;
   movies: any = [];
   searchTitle: string = '';
+  isLoading: boolean = false;
 
   constructor(private moviesService: MoviesService) {}
 
@@ -18,12 +19,32 @@ export class MovieAppComponent implements OnInit {
   }
 
   getMovies() {
-    this.moviesService.getMovies().subscribe((m: any) => {
-      this.data = m;
-      this.movies = m.results;
-      console.log(this.movies);
-    });
+    this.isLoading = true;
+    this.moviesService.getMovies().subscribe(
+      (m: any) => {
+        this.isLoading = false;
+        this.data = m;
+        this.movies = m.results;
+      },
+      (error) => {
+        this.isLoading = false;
+      }
+    );
   }
 
-  findMovies() {}
+  findMovies() {
+    if (this.searchTitle && this.searchTitle.trim().length > 0) {
+      this.isLoading = true;
+      this.moviesService.searchMovies(this.searchTitle).subscribe(
+        (m: any) => {
+          this.isLoading = false;
+          this.data = m;
+          this.movies = m.results;
+        },
+        (error) => {
+          this.isLoading = false;
+        }
+      );
+    }
+  }
 }

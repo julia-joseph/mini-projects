@@ -12,7 +12,7 @@ export class MovieComponent implements OnInit {
     vote_average: 0,
     overview: '',
   };
-  showAbout: number = 400;
+  showAbout: boolean = false;
 
   constructor() {}
 

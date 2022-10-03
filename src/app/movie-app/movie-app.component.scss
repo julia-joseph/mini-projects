@@ -12,6 +12,48 @@ nav {
     color: white;
     padding: 1rem;
   }
+
+  .search {
+    margin: auto 1rem auto 0rem;
+
+    input {
+      background-color: black;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      border-left: 1px solid white;
+      border-right: none;
+      color: white;
+      font-family: inherit;
+      height: 24px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    button {
+      height: 24px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      border-right: 1px solid white;
+      border-left: none;
+      background-color: black;
+      cursor: pointer;
+
+      i {
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
 }
 
 .movies {
@@ -20,4 +62,15 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: rgba($color: black, $alpha: 0.9);
+  min-height: calc(100vh - 56px);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px);
+  background-color: rgba($color: black, $alpha: 0.9);
+  color: white;
+  font-size: 2rem;
 }
