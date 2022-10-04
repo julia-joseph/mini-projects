@@ -1,5 +1,6 @@
 <div
   class="image-container"
+  [ngClass]="{ active: image.isActive }"
   [ngStyle]="{ 'background-image': 'url(' + image.url + ')' }"
 >
   <img [src]="image.url" alt="{{ image.name }}" />

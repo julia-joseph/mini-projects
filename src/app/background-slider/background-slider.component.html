@@ -3,9 +3,15 @@
     <i class="fa-solid fa-house"></i><span></span>
   </div>
   <div class="images">
+    <button class="prev-btn" (click)="prevImage()">
+      <i class="fa-solid fa-angles-left"></i>
+    </button>
     <app-slide
       *ngFor="let image of images; index as i"
       [image]="image"
     ></app-slide>
+    <button class="next-btn" (click)="nextImage()">
+      <i class="fa-solid fa-angles-right"></i>
+    </button>
   </div>
 </main>

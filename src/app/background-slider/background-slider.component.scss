@@ -10,4 +10,24 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
+
+  button {
+    background-color: rgba($color: white, $alpha: 0.3);
+    border: 1px solid white;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+
+    &.prev-btn {
+      top: 50%;
+      left: 2%;
+    }
+
+    &.next-btn {
+      top: 50%;
+      left: 95%;
+    }
+  }
 }
