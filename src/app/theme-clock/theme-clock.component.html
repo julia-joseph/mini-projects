@@ -1,0 +1,37 @@
+<main [ngClass]="{ dark: isDarkMode }">
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <div class="main-container">
+    <button (click)="toggleDarkLightMode()">
+      {{ isDarkMode ? "Light Mode" : "Dark Mode" }}
+    </button>
+    <div class="clock">
+      <div
+        class="needle hour"
+        [ngStyle]="{
+          transform: 'rotate(' + scale(+clockHour, 0, 11, 0, 360) + 'deg)'
+        }"
+      ></div>
+      <div
+        class="needle minute"
+        [ngStyle]="{
+          transform: 'rotate(' + scale(+minute, 0, 59, 0, 360) + 'deg)'
+        }"
+      ></div>
+      <div
+        class="needle second"
+        [ngStyle]="{
+          transform: 'rotate(' + scale(+seconds, 0, 59, 0, 360) + 'deg)'
+        }"
+      ></div>
+      <div class="clock-center"></div>
+    </div>
+    <div class="info">
+      <div class="time">
+        {{ clockHour }}:{{ minute }}:{{ seconds }} {{ ampm }}
+      </div>
+      <div class="day">{{ day }}, {{ month }} {{ date }}</div>
+    </div>
+  </div>
+</main>

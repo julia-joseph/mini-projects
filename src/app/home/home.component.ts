@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     { name: 'Drink Water', path: 'drink-water' },
     { name: 'Movie App', path: 'movie-app' },
     { name: 'Background Slider', path: 'background-slider' },
+    { name: 'Theme Clock', path: 'theme-clock' },
   ];
 
   constructor() {}

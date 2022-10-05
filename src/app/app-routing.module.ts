@@ -129,6 +129,13 @@ const routes: Routes = [
         (m) => m.BackgroundSliderModule
       ),
   },
+  {
+    path: 'theme-clock',
+    loadChildren: () =>
+      import('./theme-clock/theme-clock.module').then(
+        (m) => m.ThemeClockModule
+      ),
+  },
 ];
 
 @NgModule({

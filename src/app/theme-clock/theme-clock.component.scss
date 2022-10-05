@@ -1,0 +1,202 @@
+main {
+  min-height: 100vh;
+  $primary-color: black;
+  $secondary-color: white;
+
+  .home-link {
+    min-width: calc(100vw - 1rem);
+    text-align: center;
+    padding: 0.5rem;
+    color: $primary-color;
+    background-color: $secondary-color;
+    box-shadow: 0 3px 6px rgba($color: $primary-color, $alpha: 0.1),
+      0 3px 6px rgba($color: $primary-color, $alpha: 0.1);
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $primary-color;
+    height: calc(100vh - 2.5rem);
+
+    button {
+      background-color: $primary-color;
+      color: $secondary-color;
+      padding: 0.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .clock {
+      height: 200px;
+      width: 200px;
+      position: relative;
+      //   box-shadow: 0 3px 6px rgba($color: $primary-color, $alpha: 0.1),
+      //     0 3px 6px rgba($color: $primary-color, $alpha: 0.1);
+      //   border-radius: 40%;
+      //   padding: 0.5rem;
+
+      .needle {
+        position: absolute;
+        height: 100px;
+        width: 2px;
+        bottom: 50%;
+        left: 50%;
+        background-color: $primary-color;
+        transform-origin: bottom center;
+        transition: 0.3s ease;
+
+        &.hour {
+          height: 50px;
+        }
+
+        &.minute {
+          //   transform: rotate(40deg);
+        }
+
+        &.second {
+          background-color: red;
+        }
+      }
+
+      .clock-center {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+          content: "";
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .info {
+      text-align: center;
+      .time {
+        font-size: 2rem;
+      }
+
+      .day {
+        font-weight: 200;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &.dark {
+    $primary-color: white;
+    $secondary-color: black;
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    .home-link {
+      min-width: calc(100vw - 1rem);
+      text-align: center;
+      padding: 0.5rem;
+      color: $primary-color;
+      background-color: $secondary-color;
+      box-shadow: 0 3px 6px rgba($color: $primary-color, $alpha: 0.1),
+        0 3px 6px rgba($color: $primary-color, $alpha: 0.1);
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: $primary-color;
+      height: calc(100vh - 2.5rem);
+
+      button {
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 0.5rem;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+
+      .clock {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        // box-shadow: 0 3px 6px rgba($color: $primary-color, $alpha: 0.1),
+        //   0 3px 6px rgba($color: $primary-color, $alpha: 0.1);
+        // border-radius: 40%;
+        // padding: 0.5rem;
+
+        .needle {
+          position: absolute;
+          height: 100px;
+          width: 2px;
+          bottom: 50%;
+          left: 50%;
+          background-color: $primary-color;
+          transform-origin: bottom center;
+          transition: 0.3s ease;
+
+          &.hour {
+            height: 50px;
+          }
+
+          &.minute {
+            //   transform: rotate(40deg);
+          }
+
+          &.second {
+            background-color: red;
+          }
+        }
+
+        .clock-center {
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          background-color: red;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &::before {
+            content: "";
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      .info {
+        text-align: center;
+        .time {
+          font-size: 2rem;
+        }
+
+        .day {
+          font-weight: 200;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
