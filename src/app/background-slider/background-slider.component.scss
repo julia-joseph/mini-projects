@@ -1,4 +1,7 @@
 main {
+  min-height: 100vh;
+  min-width: 100vw;
+
   .home-link {
     min-width: calc(100vw - 1rem);
     text-align: center;
@@ -7,9 +10,6 @@ main {
 }
 
 .images {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   position: relative;
 
   button {
@@ -19,6 +19,7 @@ main {
     color: white;
     cursor: pointer;
     padding: 1rem;
+    z-index: 3;
 
     &.prev-btn {
       top: 50%;
@@ -27,7 +28,15 @@ main {
 
     &.next-btn {
       top: 50%;
-      left: 95%;
+      right: 2%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .images {
+    button {
+      padding: 0.5rem;
     }
   }
 }

@@ -1,20 +1,36 @@
 .image-container {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   height: calc(100vh - 2.5rem);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   //   filter: blur(10px);
-  display: none;
+  // display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 
   img {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     border: 1px solid white;
-    height: 60%;
-    width: 50%;
+    height: 70vh;
+    width: 70vw;
+    z-index: 2;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16),
+      0 3px 6px rgba($color: #000000, $alpha: 0.23);
 
     &:hover {
       transform: scale(1.02);
@@ -23,6 +39,7 @@
   }
 
   &.active {
-    display: flex;
+    // display: flex;
+    opacity: 1;
   }
 }

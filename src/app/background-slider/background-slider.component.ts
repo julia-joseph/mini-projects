@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-background-slider',
   templateUrl: './background-slider.component.html',
   styleUrls: ['./background-slider.component.scss'],
 })
-export class BackgroundSliderComponent implements OnInit {
+export class BackgroundSliderComponent implements OnInit, OnDestroy {
   images = [
     {
       name: 'Blue Sea Mountains',
@@ -38,31 +38,38 @@ export class BackgroundSliderComponent implements OnInit {
       isActive: false,
     },
   ];
+  index = 0;
+  interval: any;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.interval = setInterval(() => {
+      if (this.index === this.images.length - 1) {
+        this.index = 0;
+      } else {
+        ++this.index;
+      }
+    }, 2500);
+  }
 
   prevImage() {
-    const index = this.images.findIndex((img) => img.isActive);
-
-    if (index === 0) {
-      this.images[index].isActive = false;
-      this.images[this.images.length - 1].isActive = true;
+    if (this.index === 0) {
+      this.index = this.images.length - 1;
     } else {
-      this.images[index].isActive = false;
-      this.images[index - 1].isActive = true;
+      this.index = this.index - 1;
     }
   }
 
   nextImage() {
-    const index = this.images.findIndex((img) => img.isActive);
-
-    if (index === this.images.length - 1) {
-      this.images[index].isActive = false;
-      this.images[0].isActive = true;
+    if (this.index === this.images.length - 1) {
+      this.index = 0;
     } else {
-      this.images[index].isActive = false;
-      this.images[index + 1].isActive = true;
+      this.index = this.index + 1;
     }
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 }
