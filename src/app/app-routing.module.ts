@@ -136,6 +136,13 @@ const routes: Routes = [
         (m) => m.ThemeClockModule
       ),
   },
+  {
+    path: 'rippling-button',
+    loadChildren: () =>
+      import('./rippling-button/rippling-button.module').then(
+        (m) => m.RipplingButtonModule
+      ),
+  },
 ];
 
 @NgModule({
