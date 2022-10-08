@@ -1,0 +1,28 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <h3>Drag N Drop</h3>
+  <div class="container">
+    <div class="boxes">
+      <div
+        *ngFor="let box of boxes; index as i"
+        class="box"
+        (drop)="onDrop($event, i)"
+        (dragover)="onDragOver($event, i)"
+        (dragenter)="onDragEnter($event, i)"
+        (dragleave)="onDragLeave($event, i)"
+        [ngClass]="{ hovered: box.beingHovered }"
+      >
+        <div
+          class="fill"
+          *ngIf="box.isFilled"
+          draggable="true"
+          [ngClass]="{ dragging: box.beingDragged, invisible: box.isInvisible }"
+          (dragstart)="onDragStart($event, i)"
+          (dragend)="onDragEnd($event, i)"
+        ></div>
+      </div>
+    </div>
+  </div>
+</main>

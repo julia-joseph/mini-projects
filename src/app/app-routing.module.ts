@@ -143,6 +143,11 @@ const routes: Routes = [
         (m) => m.RipplingButtonModule
       ),
   },
+  {
+    path: 'drag-n-drop',
+    loadChildren: () =>
+      import('./drag-n-drop/drag-n-drop.module').then((m) => m.DragNDropModule),
+  },
 ];
 
 @NgModule({

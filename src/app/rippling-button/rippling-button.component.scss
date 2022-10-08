@@ -2,7 +2,20 @@ main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+  .home-link {
+    min-width: calc(100vw - 1rem);
+    text-align: center;
+    padding: 0.5rem;
+    color: black;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba($color: black, $alpha: 0.1),
+      0 3px 6px rgba($color: black, $alpha: 0.1);
+    position: fixed;
+    top: 0px;
+  }
 }
 
 button {
