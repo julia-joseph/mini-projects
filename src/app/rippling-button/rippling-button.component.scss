@@ -16,6 +16,10 @@ button {
   overflow: hidden;
   position: relative;
   border-radius: 50px;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .circle {
