@@ -14,19 +14,31 @@ import {
 export class RipplingButtonComponent implements OnInit, AfterViewInit {
   top: number = 0;
   left: number = 0;
+  clicked: boolean = false;
   @ViewChild('button') button: ElementRef | undefined;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  buttonClick() {
-    // console.log(e);
-    console.log(this.button);
+  buttonClick(e: any) {
     const offsetTop = this.button?.nativeElement.offsetTop;
     const offsetLeft = this.button?.nativeElement.offsetLeft;
 
-    console.log(offsetTop, offsetLeft);
+    const windowOffsetLeft = e.clientX;
+    const windowOffsetTop = e.clientY;
+
+    const diffLeft = windowOffsetLeft - offsetLeft;
+    const diffTop = windowOffsetTop - offsetTop;
+
+    this.top = diffTop;
+    this.left = diffLeft;
+
+    this.clicked = true;
+
+    setTimeout(() => {
+      this.clicked = false;
+    }, 500);
   }
 
   ngAfterViewInit(): void {

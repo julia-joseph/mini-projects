@@ -13,4 +13,30 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50px;
+}
+
+.circle {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: scale-anim 0.75s ease-in-out;
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes scale-anim {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
 }

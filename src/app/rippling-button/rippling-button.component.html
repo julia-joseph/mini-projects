@@ -1,8 +1,9 @@
 <main>
-  <button (click)="buttonClick()" #button>
+  <button (click)="buttonClick($event)" #button>
     CLICK ME
     <span
       class="circle"
+      *ngIf="clicked"
       [ngStyle]="{ top: top + 'px', left: left + 'px' }"
     ></span>
   </button>
