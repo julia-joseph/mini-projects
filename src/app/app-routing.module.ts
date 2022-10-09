@@ -169,6 +169,13 @@ const routes: Routes = [
         (m) => m.ContentPlaceholderModule
       ),
   },
+  {
+    path: 'sticky-navbar',
+    loadChildren: () =>
+      import('./sticky-navbar/sticky-navbar.module').then(
+        (m) => m.StickyNavbarModule
+      ),
+  },
 ];
 
 @NgModule({

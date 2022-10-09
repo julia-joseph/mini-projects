@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     { name: 'Drawing Pad', path: 'drawing-pad' },
     { name: 'Kinetic Loader', path: 'kinetic-loader' },
     { name: 'Content Placeholder', path: 'content-placeholder' },
+    { name: 'Sticky Navbar', path: 'sticky-navbar' },
   ];
 
   constructor() {}
