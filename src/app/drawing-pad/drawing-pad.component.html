@@ -1,0 +1,31 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <div class="container">
+    <canvas
+      [height]="height"
+      [width]="width"
+      #canvas
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd($event)"
+      (mousedown)="onMouseDown($event)"
+      (mouseup)="onMouseUp($event)"
+      (mousemove)="onMouseMove($event)"
+    >
+    </canvas>
+    <div class="toolbox">
+      <button (click)="size > 5 ? (size = size - 1) : ''">-</button>
+      <div class="size">{{ size }}</div>
+      <button (click)="size < 50 ? (size = size + 1) : ''">+</button>
+      <input
+        type="color"
+        name="color"
+        id="color"
+        (change)="changeColor($event)"
+        [value]="color"
+      />
+      <button (click)="resetPad()">X</button>
+    </div>
+  </div>
+</main>

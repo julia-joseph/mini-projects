@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     { name: 'Theme Clock', path: 'theme-clock' },
     { name: 'Rippling Button', path: 'rippling-button' },
     { name: 'Drag N Drop', path: 'drag-n-drop' },
+    { name: 'Drawing Pad', path: 'drawing-pad' },
   ];
 
   constructor() {}

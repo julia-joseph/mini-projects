@@ -148,6 +148,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./drag-n-drop/drag-n-drop.module').then((m) => m.DragNDropModule),
   },
+  {
+    path: 'drawing-pad',
+    loadChildren: () =>
+      import('./drawing-pad/drawing-pad.module').then(
+        (m) => m.DrawingPadModule
+      ),
+  },
 ];
 
 @NgModule({
