@@ -1,0 +1,138 @@
+main {
+  min-height: 100vh;
+
+  .home-link {
+    min-width: calc(100vw - 1rem);
+    text-align: center;
+    padding: 0.5rem;
+    color: black;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba($color: black, $alpha: 0.1),
+      0 3px 6px rgba($color: black, $alpha: 0.1);
+    position: fixed;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    margin-top: 5rem;
+    height: 450px;
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba($color: black, $alpha: 0.3);
+    overflow: hidden;
+
+    .card-header {
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      height: calc(250px - 2.25rem);
+
+      h3 {
+        margin: 0;
+
+        &.animated-text {
+          height: 3rem;
+        }
+      }
+
+      .card-description {
+        color: #777;
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
+        word-break: break-all;
+      }
+
+      .card-info {
+        display: flex;
+        margin-top: auto;
+
+        .author-pic {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          min-width: 100px;
+
+          .author-name {
+            font-weight: 500;
+          }
+
+          .date {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+
+  .animated-img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .animated-description {
+    margin: 1rem 0rem 0rem 0rem;
+    .animated-text {
+      margin: 0.25rem 0rem;
+      height: 1rem;
+    }
+  }
+
+  .animated-bg {
+    background-image: linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 10%,
+      #f6f7f8 20%,
+      #f6f7f8 100%
+    );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+  }
+
+  .animated-text {
+    height: 16px;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 10%,
+      #f6f7f8 20%,
+      #f6f7f8 100%
+    );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+  }
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}

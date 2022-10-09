@@ -162,6 +162,13 @@ const routes: Routes = [
         (m) => m.KineticLoaderModule
       ),
   },
+  {
+    path: 'content-placeholder',
+    loadChildren: () =>
+      import('./content-placeholder/content-placeholder.module').then(
+        (m) => m.ContentPlaceholderModule
+      ),
+  },
 ];
 
 @NgModule({

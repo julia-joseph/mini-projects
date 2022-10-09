@@ -1,0 +1,61 @@
+<main>
+  <div [routerLink]="['/home']" class="home-link">
+    <i class="fa-solid fa-house"></i><span></span>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div
+          class="animated-img animated-bg"
+          *ngIf="!card.imageUrl.length"
+        ></div>
+        <img
+          *ngIf="card.imageUrl.length"
+          src="{{ card.imageUrl }}"
+          alt="{{ card.name }}"
+        />
+      </div>
+      <div class="card-content">
+        <h3 [ngClass]="{ 'animated-text': !card.title.length }">
+          {{ card.title }}
+        </h3>
+        <div *ngIf="card.description.length" class="card-description">
+          {{ card.description }}
+        </div>
+        <div
+          *ngIf="!card.description.length"
+          class="card-description animated-description"
+        >
+          <div class="animated-text"></div>
+          <div class="animated-text"></div>
+          <div class="animated-text"></div>
+        </div>
+        <div class="card-info">
+          <div
+            class="author-pic animated-bg"
+            *ngIf="!card.author.imageUrl.length"
+          ></div>
+          <img
+            *ngIf="card.author.imageUrl.length"
+            class="author-pic"
+            src="{{ card.author.imageUrl }}"
+            alt="{{ card.author.name }}"
+          />
+          <div class="info">
+            <div
+              class="author-name"
+              [ngClass]="{ 'animated-text': !card.author.name.length }"
+            >
+              {{ card.author.name }}&nbsp;
+            </div>
+            <small
+              class="date"
+              [ngClass]="{ 'animated-text': !card.date.length }"
+              >{{ card.date }}</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
