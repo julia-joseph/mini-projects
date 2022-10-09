@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
     { name: 'Rippling Button', path: 'rippling-button' },
     { name: 'Drag N Drop', path: 'drag-n-drop' },
     { name: 'Drawing Pad', path: 'drawing-pad' },
+    { name: 'Kinetic Loader', path: 'kinetic-loader' },
   ];
 
   constructor() {}

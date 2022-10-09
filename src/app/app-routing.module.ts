@@ -155,6 +155,13 @@ const routes: Routes = [
         (m) => m.DrawingPadModule
       ),
   },
+  {
+    path: 'kinetic-loader',
+    loadChildren: () =>
+      import('./kinetic-loader/kinetic-loader.module').then(
+        (m) => m.KineticLoaderModule
+      ),
+  },
 ];
 
 @NgModule({

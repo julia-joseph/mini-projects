@@ -1,0 +1,76 @@
+main {
+  min-height: 100vh;
+
+  .home-link {
+    min-width: calc(100vw - 1rem);
+    text-align: center;
+    padding: 0.5rem;
+    color: black;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba($color: black, $alpha: 0.1),
+      0 3px 6px rgba($color: black, $alpha: 0.1);
+    position: fixed;
+    top: 0px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(16, 16, 190), purple);
+  min-height: 100vh;
+
+  .kinetic {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      color: white;
+      height: 0px;
+      width: 0px;
+      border: 50px solid transparent;
+      border-bottom-color: white;
+      position: absolute;
+      animation: rotateA 2s linear infinite 0.5s;
+    }
+
+    &::before {
+      transform: rotate(90deg);
+      animation: rotateB 2s linear infinite;
+    }
+  }
+}
+
+@keyframes rotateA {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateB {
+  0%,
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50%,
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(450deg);
+  }
+}
