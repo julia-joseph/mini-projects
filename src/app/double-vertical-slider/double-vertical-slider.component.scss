@@ -1,0 +1,75 @@
+main {
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "txt txt img img img img";
+  min-height: 100vh;
+
+  .text-container {
+    background-color: white;
+    color: white;
+    font-size: 1.25rem;
+    grid-area: txt;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100);
+    transition: 0.3s linear;
+
+    .typewriter h1 {
+      color: #fff;
+      font-family: monospace;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid orange; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.15em;
+      animation: blink-caret 0.5s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: calc(50% + 42px);
+      right: 0%;
+      cursor: pointer;
+      background-color: rgba($color: white, $alpha: 0.5);
+      border: 1px solid white;
+      box-shadow: 0 2px 6px rgba($color: #000000, $alpha: 0.1);
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  .img-container {
+    background-color: black;
+    grid-area: img;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: 0.3s linear;
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      cursor: pointer;
+      background-color: rgba($color: white, $alpha: 0.5);
+      border: 1px solid white;
+      box-shadow: 0 2px 6px rgba($color: #000000, $alpha: 0.1);
+      padding: 0.75rem 0.5rem;
+    }
+  }
+}

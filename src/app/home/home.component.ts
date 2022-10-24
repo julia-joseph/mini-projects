@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
     { name: 'Kinetic Loader', path: 'kinetic-loader' },
     { name: 'Content Placeholder', path: 'content-placeholder' },
     { name: 'Sticky Navbar', path: 'sticky-navbar' },
+    { name: 'Double Vertical Slider', path: 'double-vertical-slider' },
   ];
 
   constructor() {}

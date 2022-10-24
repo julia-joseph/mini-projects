@@ -176,6 +176,13 @@ const routes: Routes = [
         (m) => m.StickyNavbarModule
       ),
   },
+  {
+    path: 'double-vertical-slider',
+    loadChildren: () =>
+      import('./double-vertical-slider/double-vertical-slider.module').then(
+        (m) => m.DoubleVerticalSliderModule
+      ),
+  },
 ];
 
 @NgModule({
