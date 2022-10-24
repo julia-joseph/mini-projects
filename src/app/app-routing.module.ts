@@ -183,6 +183,13 @@ const routes: Routes = [
         (m) => m.DoubleVerticalSliderModule
       ),
   },
+  {
+    path: 'toast-notifications',
+    loadChildren: () =>
+      import('./toast-notifications/toast-notifications.module').then(
+        (m) => m.ToastNotificationsModule
+      ),
+  },
 ];
 
 @NgModule({

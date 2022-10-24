@@ -1,0 +1,14 @@
+<main>
+  <div class="container">
+    <button (click)="showNotification()">Show Notification</button>
+  </div>
+  <div class="toasts">
+    <div
+      class="toast"
+      *ngFor="let toast of toasts; index as i"
+      [ngStyle]="{ color: toast.color, 'border-color': toast.color }"
+    >
+      {{ toast.message }}
+    </div>
+  </div>
+</main>

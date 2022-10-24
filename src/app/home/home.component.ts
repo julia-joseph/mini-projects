@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
     { name: 'Content Placeholder', path: 'content-placeholder' },
     { name: 'Sticky Navbar', path: 'sticky-navbar' },
     { name: 'Double Vertical Slider', path: 'double-vertical-slider' },
+    { name: 'Toast Notifications', path: 'toast-notifications' },
   ];
 
   constructor() {}
