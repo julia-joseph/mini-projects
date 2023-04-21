@@ -190,6 +190,11 @@ const routes: Routes = [
         (m) => m.ToastNotificationsModule
       ),
   },
+  {
+    path: 'page-flip',
+    loadChildren: () =>
+      import('./random/random.module').then((m) => m.RandomModule),
+  },
 ];
 
 @NgModule({

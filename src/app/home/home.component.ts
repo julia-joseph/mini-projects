@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
     { name: 'Sticky Navbar', path: 'sticky-navbar' },
     { name: 'Double Vertical Slider', path: 'double-vertical-slider' },
     { name: 'Toast Notifications', path: 'toast-notifications' },
+    { name: 'Page Flip', path: 'page-flip' },
   ];
 
   constructor() {}
