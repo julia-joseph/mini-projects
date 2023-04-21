@@ -195,6 +195,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./random/random.module').then((m) => m.RandomModule),
   },
+  {
+    path: 'double-tap',
+    loadChildren: () =>
+      import('./double-tap/double-tap.module').then((m) => m.DoubleTapModule),
+  },
 ];
 
 @NgModule({

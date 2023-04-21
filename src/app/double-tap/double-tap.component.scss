@@ -1,0 +1,66 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+
+  .fa-heart {
+    color: red;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .image {
+      background-image: url("https://images.unsplash.com/photo-1447195047884-0f014b0d9288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 500px;
+      height: 600px;
+      position: relative;
+
+      i.fas.fa-heart {
+        color: blue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+        animation: heart-boom 1s linear;
+      }
+    }
+
+    img {
+      max-width: 500px;
+      max-height: 600px;
+      //   position: relative;
+    }
+
+    .taps {
+      font-size: 2rem;
+      padding: 0.75rem;
+    }
+  }
+}
+
+.home-link {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@keyframes heart-boom {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}

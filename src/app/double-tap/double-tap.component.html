@@ -1,0 +1,27 @@
+<div [routerLink]="['/home']" class="home-link">
+  <i class="fa-solid fa-house"></i><span></span>
+</div>
+<main>
+  <div class="container">
+    <h4>Tap to see some <i class="fas fa-heart"></i></h4>
+    <h6>
+      You loved it
+      <span class="taps">{{ taps }}</span>
+      times?
+    </h6>
+    <div class="image" (dblclick)="dblclick($event)">
+      <i
+        class="fas fa-heart"
+        *ngIf="showHeart"
+        [ngStyle]="{
+          top: heartPosition.y + 'px',
+          left: heartPosition.x + 'px'
+        }"
+      ></i>
+    </div>
+    <!-- <img
+      src="https://images.unsplash.com/photo-1447195047884-0f014b0d9288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+      (dblclick)="dblclick($event)"
+    /> -->
+  </div>
+</main>

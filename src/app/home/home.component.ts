@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
     { name: 'Double Vertical Slider', path: 'double-vertical-slider' },
     { name: 'Toast Notifications', path: 'toast-notifications' },
     { name: 'Page Flip', path: 'page-flip' },
+    { name: 'Double Tap Heart', path: 'double-tap' },
   ];
 
   constructor() {}
